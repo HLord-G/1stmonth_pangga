@@ -1443,6 +1443,37 @@
 
 </script>
 
+<iframe
+    id="bg-music"
+     src="https://www.youtube.com/watch?v=QeKt3k_dLQc?autoplay=1&loop=1&playlist=-cSnapcY7aM&controls=0&rel=0&enablejsapi=1"
+    allow="autoplay; encrypted-media"
+    frameborder="0">
+</iframe>
+
+<script>
+// Fallback: first interaction sa user
+function startMusic() {
+    const iframe = document.getElementById("bg-music");
+
+    iframe.contentWindow.postMessage(JSON.stringify({
+        event: "command",
+        func: "playVideo",
+        args: []
+    }), "*");
+
+      iframe.contentWindow.postMessage(JSON.stringify({
+            event: "command",
+            func: "setVolume",
+            args: [20]
+        }), "*");
+
+    document.removeEventListener("click", startMusic);
+    document.removeEventListener("touchstart", startMusic);
+}
+
+document.addEventListener("click", startMusic);
+document.addEventListener("touchstart", startMusic);
+</script>
 
 </body>
 </html>
