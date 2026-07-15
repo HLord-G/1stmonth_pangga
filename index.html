@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For You, My Pangga 🍫💌</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f3e9df;
+  font-family: "DM Serif Display", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 1180px;
+  background: #fff9f3;
+  padding: 36px;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+
+.hidden {
+  display: none !important;
+}
+
+h1 {
+  font-family: 'Homemade Apple', cursive;
+  color: #7b4b35;
+  font-size: 32px;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+}
+
+button {
+  background: #8b5e3c;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 6px;
+  font-family: 'Nunito', sans-serif;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #6f452f;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+
+/* =========================
+   CHOCOLATE
+========================= */
+
+.cup {
+  font-size: 70px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.whisk {
+  position: absolute;
+  font-size: 32px;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: bottom center;
+}
+
+.whisking {
+  animation: whisk 0.35s infinite alternate;
+}
+
+@keyframes whisk {
+  from {
+    transform: translateX(-50%) rotate(-18deg);
+  }
+
+  to {
+    transform: translateX(-50%) rotate(18deg);
+  }
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.fill {
+  height: 100%;
+  width: 0%;
+  background: #8b5e3c;
+  transition: width 0.3s ease;
+}
+
+
+/* =========================
+   STEAM
+========================= */
+
+.steam {
+  font-size: 18px;
+  animation: steam 2s infinite;
+}
+
+@keyframes steam {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+}
+
+
+/* =========================
+   CODE INPUT
+========================= */
+
+#codeInput {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d6c3b5;
+  outline: none;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+}
+
+#codeInput:focus {
+  border-color: #8b5e3c;
+}
+
+
+/* =========================
+   LETTER SCENE
+========================= */
+
+#letterScene {
+  position: relative;
+}
+
+.flowers {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+
+/* =========================
+   ENVELOPE
+========================= */
+
+.envelope {
+  width: 260px;
+  height: 170px;
+  background: #f7f1e7;
+  border-radius: 6px;
+  position: relative;
+  margin: 20px auto 35px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.envelope:hover {
+  transform: translateY(-5px);
+}
+
+.envelope::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 130px solid #eee5d9;
+  border-right: 130px solid #e6ddd1;
+  border-top: 85px solid transparent;
+  z-index: 2;
+}
+
+.envelope::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 130px solid transparent;
+  border-right: 130px solid transparent;
+  border-top: 105px solid #f3ece2;
+  z-index: 3;
+}
+
+.seal {
+  width: 45px;
+  height: 45px;
+  background: #8b5e3c;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+.open-text {
+  font-size: 12px;
+  color: #777;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  z-index: 6;
+}
+
+
+/* =========================
+   LETTER WRAPPER
+========================= */
+
+.letter-wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30px;
+  width: 100%;
+}
+
+
+/* =========================
+   PAPER
+========================= */
+
+.paper {
+  background: #fffaf3;
+  padding: 38px 42px;
+  border-radius: 8px;
+  width: min(720px, 100%);
+    font-family: "DM Serif Display", serif !important;
+
+  font-size: 18px;
+  line-height: 2;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+  animation: slideUp 1s ease forwards;
+
+  text-align: left;
+}
+
+.paper h1 {
+  text-align: center;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* =========================
+   POLAROID
+========================= */
+
+.polaroid {
+  background: white;
+
+  padding: 8px 8px 18px;
+
+  width: 320px;
+
+  transform: rotate(-5deg);
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+  transition: transform 0.2s ease;
+
+  cursor: grab;
+
+  user-select: none;
+}
+
+.polaroid img {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.polaroid p {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 0;
+
+  font-family: 'Homemade Apple', cursive;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 20px 14px;
+    border-radius: 14px;
+  }
+
+  .letter-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .paper {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 20px;
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  .paper h1 {
+    font-size: 26px;
+  }
+  
+
+  .polaroid {
+    width: min(280px, 90%);
+  }
+
+  .polaroid p {
+    font-size: 14px;
+  }
+
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<div class="card" id="intro">
+
+  <h1>Hi my Lannga 💛</h1>
+
+  <p>
+    Before you read my letter,<br>
+    let's make your own virtual chocolate first 🍫☕
+  </p>
+
+  <button onclick="go('whisk')">
+    Start 🍫
+  </button>
+
+</div>
+
+
+
+<!-- =========================
+     MIX CHOCOLATE
+========================= -->
+
+<div class="card hidden" id="whisk">
+
+  <h1>Mix the chocolate 🍫</h1>
+
+  <p>Tap to mix 🤎</p>
+
+  <div class="cup">
+
+    ☕
+
+    <div class="whisk" id="whiskIcon">
+      🥄
+    </div>
+
+  </div>
+
+  <div class="progress">
+
+    <div
+      class="fill"
+      id="whiskFill">
+    </div>
+
+  </div>
+
+  <button onclick="whisk()">
+    Mix 🍫
+  </button>
+
+</div>
+
+
+
+<!-- =========================
+     CHOCOLATE FLAVOR
+========================= -->
+
+<div class="card hidden" id="flavor">
+
+  <h1>Choose your chocolate 🤎</h1>
+
+  <button onclick="pickFlavor('classic')">
+    Classic Chocolate 🍫
+  </button>
+
+  <button onclick="pickFlavor('strawberry')">
+    Strawberry Chocolate 🍓🍫
+  </button>
+
+  <button onclick="pickFlavor('milk')">
+    Milk Chocolate 🥛🍫
+  </button>
+
+</div>
+
+
+
+<!-- =========================
+     INGREDIENT
+========================= -->
+
+<div class="card hidden" id="milk">
+
+  <h1 id="ingredientTitle"></h1>
+
+  <div
+    class="cup"
+    id="cupDisplay">
+  </div>
+
+  <p id="ingredientText"></p>
+
+  <div class="steam">
+    ☁️
+  </div>
+
+  <div class="progress">
+
+    <div
+      class="fill"
+      id="milkFill">
+    </div>
+
+  </div>
+
+  <button onclick="pour()">
+    Add 🤎
+  </button>
+
+</div>
+
+
+
+<!-- =========================
+     SECRET CODE
+========================= -->
+
+<div class="card hidden" id="code">
+
+  <h1>One last thing 💌</h1>
+
+  <p>
+    What's our special date?
+  </p>
+
+  <input
+    id="codeInput"
+    placeholder="MMDDYY"
+    maxlength="6"
+    inputmode="numeric"
+  >
+
+  <br>
+
+  <button onclick="unlock()">
+    Unlock 🤎
+  </button>
+
+  <p
+    id="error"
+    style="color:#c26a6a;">
+  </p>
+
+</div>
+
+
+
+<!-- =========================
+     LETTER
+========================= -->
+
+<div
+  class="card hidden"
+  id="letterScene">
+
+
+  <div class="flowers">
+    🌸💛🌹🌹🌹
+  </div>
+
+
+  <div
+    class="envelope"
+    onclick="openLetter()">
+
+    <div class="seal">
+      🤎
+    </div>
+
+    <p class="open-text">
+      Tap to open
+    </p>
+
+  </div>
+
+
+
+  <div
+    class="letter-wrapper hidden"
+    id="letterWrapper">
+
+
+    <!-- LETTER PAPER -->
+<div class="paper">
+
+  <h1>
+    🌸 To My Langga, My Gha 🌸
+  </h1>
+
+  July 28, 2026
+
+  <br><br>
+
+  Happy first monthsary, Ghaaaa! 💛🌹
+
+  <br><br>
+
+  Or… monthsary na ba gyud ni? HAHAHA. Kita na ba? 😭😂
+  Ambot lang gyud nimo, Gha. Basta ang sure nako, one month na
+  sukad nga nisulod ka sa akong life and somehow, murag naa nakay
+  permanent spot sa akong adlaw-adlaw.
+
+  <br><br>
+
+  So bahala na… happy first monthsary sa atoa. HAHAHA 💛
+
+  <br><br>
+
+  Gha, one month pa lang.
+
+  <br><br>
+
+  If hunahunaon nako, murag mubo ra kaayo ang one month.
+  Pero daghan na kaayo kog na-feel, nahuna-hunaan, ug moments
+  nga akong na-cherish tungod nimo.
+
+  <br><br>
+
+  From our random conversations, sa mga jokes, sa mga times nga
+  okay ta, sa moments nga naa tay misunderstanding, even sa mga
+  adlaw nga murag kapoy ang tanan… somehow, naa gihapon ka.
+
+  <br><br>
+
+  And honestly, Gha, I'm really thankful nga nakaila tika.
+
+  <br><br>
+
+  Kabalo ka, every time moingon ko ug
+  <strong>“I love you,”</strong>
+  I really mean it.
+
+  <br><br>
+
+  Kabalo pud ko nga every time moingon ko ana, kasagaran imong
+  tubag kay…
+
+  <br><br>
+
+  <strong>“Thank you, Pang.”</strong> 😭😂
+
+  <br><br>
+
+  HAHAHAHA usahay baya, Gha, murag gusto nako moingon,
+  <em>“Thank you ra gyud, Gha? Wala gyuy sukli diha?”</em> 😂
+
+  <br><br>
+
+  Pero jokes aside… I understand you.
+
+  <br><br>
+
+  I know nga para sa imo, the words
+  <strong>“I love you”</strong>
+  are precious. Sacred, maybe.
+
+  <br><br>
+
+  Dili siya words nga basta-basta lang nimo buhian or isulti
+  tungod kay mao ang expected nga tubag. Dili siya words nga
+  imong ihatag to just anyone or say without truly meaning it.
+
+  <br><br>
+
+  And honestly, Gha… I respect that about you.
+
+  <br><br>
+
+  Dili tika basulon. Dili pud tika pugson nga isulti na sa akoa
+  just because sige kog ingon nga I love you.
+
+  <br><br>
+
+  Layo man pud ta sa usag usa. We met through chat.
+  Wala pa gani ta nagkita personally, wala pa tika nahikap,
+  wala pa nako nakuptan imong kamot, and maybe there are still
+  so many things nga kinahanglan pa nato mahibal-an about each other.
+
+  <br><br>
+
+  So I understand.
+
+  <br><br>
+
+  Pero Gha… maghulat ko sa <strong>puhon</strong>. 💛
+
+  <br><br>
+
+  Maghulat ko sa adlaw nga every <strong>“I love you”</strong>
+  nga akong ihatag sa imo, mobalik pud sa akoa not because
+  gipugos tika, not because you feel obligated nga tubagon ko,
+  but because your own heart finally wants to say it.
+
+  <br><br>
+
+  And maybe one day, instead nga
+  <strong>“Thank you, Pang,”</strong>
+  imong reply…
+
+  <br><br>
+
+  <strong>“I love you too, Pang.”</strong>
+
+  <br><br>
+
+  HAHAHAHAHA aw advance kaayo kog imagination. 😭😂
+
+  <br><br>
+
+  Pero bitaw, Gha…
+
+  <br><br>
+
+  If that day comes, I want to know nga tinuod gyud to gikan
+  sa imong heart.
+
+  <br><br>
+
+  Until then, okay ra.
+
+  <br><br>
+
+  I'll let my <strong>“I love you”</strong> stay with you.
+  Keep it lang sa, Gha. 😂 Tigoma lang na tanan.
+  Basin ma-full storage naka sa kadaghan sa akong I love you. 😭😂
+
+  <br><br>
+
+  Because every time I'm saying
+  <strong>“I love you,”</strong>
+  I really mean it, Gha.
+
+  <br><br>
+
+  Lami kaayo ka guniton ug i-hug, kuptan imong kamot,
+  and kiss you. I really wish naa ko diha beside you.
+
+  <br><br>
+
+  I want to cuddle you every time naa kay problem, especially
+  sa mga moments nga dili kaya ma-solve through actions or words.
+
+  <br><br>
+
+  Sometimes, I don't even need to say anything.
+  I just want to be there, gunitan ka ug ayo, and make you feel
+  nga dili ka nag-inusara.
+
+  <br><br>
+
+  Kung mabaklay lang gyud nako ang CDO to Leyte,
+  baklayon gyud nako, Gha. 😢
+
+  <br><br>
+
+  Dali ra kaayo sa akoa ang tanan if it means nga makauban tika.
+
+  <br><br>
+
+  Pero unsaon man nato… murag gi-testingan gyud ta.
+  We have two barriers between us right now:
+  <strong>distance and money.</strong>
+
+  <br><br>
+
+  Pero Gha, if those barriers makaya ra nako ug katkat,
+  then why not?
+
+  <br><br>
+
+  Andam gyud ko maningkamot ug mag-sacrifice.
+
+  <br><br>
+
+  Time, panahon, distance, and money… wala ra na sa akoa if,
+  at the end of it all, makauban lang tika.
+
+  <br><br>
+
+  Gha, I never begged or pleaded for love before.
+
+  <br><br>
+
+  Pero ghaaa
+
+  <br><br>
+
+  <strong>Hold on, Gha.</strong>
+
+  <br><br>
+
+  Hulati ko.
+
+  <br><br>
+
+  Hulati ko nga makaabot diha sa imo.
+
+  <br><br>
+
+  I want to hold your hands and finally say the words
+  <strong>“I love you”</strong>
+  sa imong atubangan.
+
+  <br><br>
+
+  Dili na through chat. Not through a screen.
+
+  <br><br>
+
+  Ako mismo.
+
+  <br><br>
+
+  Naa sa imong atubangan.
+
+  <br><br>
+
+  And maybe while gakurog akong kamot kay naulaw ko.
+  HAHAHAHA 😭😂 Pero bahala na.
+
+  <br><br>
+
+  At least makita gyud nimo akong nawong every time I say…
+
+  <br><br>
+
+  <strong>I love you, Gha.</strong>
+
+  <br><br>
+
+  Maglingkamot gyud ko nga makaabot diha.
+
+  <br><br>
+
+  Ikaw gyud akong inspiration every day nga mumata ko.
+
+  <br><br>
+
+  Sa mga times nga galisod ko, I just think of you,
+  and somehow things start to feel a little easier.
+
+  <br><br>
+
+  Because I know nga after ani nga kalisod, naa koy something
+  beautiful nga akong gina-look forward to…
+
+  <br><br>
+
+  <strong>The chance nga makauban tika.</strong>
+
+  <br><br>
+
+  Wala pa gyud ko kabati ani nga kind of love before.
+
+  <br><br>
+
+  I don't even know why, but I feel so deeply in love with you, Gha.
+
+  <br><br>
+
+  Nagkaila ra man unta ta through chat. Wala pay physical touch
+  or anything. Pero somehow, my heart feels so close to you.
+
+  <br><br>
+
+  Funny, no?
+
+  <br><br>
+
+  Someone can be hundreds of kilometers away, pero mahimong
+  isa sa pinaka-close sa imong heart.
+
+  <br><br>
+
+  And Gha…
+
+  <br><br>
+
+  I don't want to promise nga everything will always be perfect.
+
+  <br><br>
+
+  Maybe naa pay days nga maglisod ta. Maybe naa pay misunderstandings.
+  Maybe naa pay moments nga mapul-an ka sa akong pagka-overthinker. 😭😂
+
+  <br><br>
+
+  But one thing I can promise is this:
+
+  <br><br>
+
+  <strong>Maningkamot ko.</strong>
+
+  <br><br>
+
+  I'll take my time.
+
+  <br><br>
+
+  I'll continue working on myself.
+
+  <br><br>
+
+  And I'll do my best to reach you.
+
+  <br><br>
+
+  Dili lang physically, Gha.
+
+  <br><br>
+
+  I also want to reach the parts of your heart nga maybe lisod
+  pa nimo ipakita. I want to understand you more, slowly,
+  without forcing you.
+
+  <br><br>
+
+  So, Gha…
+
+  <br><br>
+
+  Happy first monthsary sa atoa. 💛🌹
+
+  <br><br>
+
+  Monthsary man kaha ni? HAHAHAHA. Bahala na gyud. 😂
+
+  <br><br>
+
+  Thank you for this first month.
+
+  <br><br>
+
+  Thank you sa imong presence.
+
+  <br><br>
+
+  Thank you sa imong patience.
+
+  <br><br>
+
+  And yes…
+
+  <br><br>
+
+  Thank you pud sa tanan nimong
+  <strong>“Thank you, Pang”</strong>
+  every time moingon kog I love you. 😭😂💛
+
+  <br><br>
+
+  I'll wait for my
+  <strong>“I love you too, Pang.”</strong>
+
+  <br><br>
+
+  No pressure, Gha.
+
+  <br><br>
+
+  Take your time.
+
+  <br><br>
+
+  Pero basin pwede before ko ma-senior citizen.
+  HAHAHAHAHA 😭😂
+
+  <br><br>
+
+  Bitaw…
+
+  <br><br>
+
+  <strong>Hold on, Gha.</strong>
+
+  <br><br>
+
+  Hulati ko.
+
+  <br><br>
+
+  I'll find my way to you.
+
+  <br><br>
+
+  And when I finally get there, I hope I can hold your hand,
+  look at you, and say all the words nga dugay na kaayo nakong
+  gina-type through this screen.
+
+  <br><br>
+
+  <strong>I love you, Gha.</strong>
+
+  <br><br>
+
+  With all my heart.
+
+  <br><br>
+
+  Always.
+
+  <br><br><br>
+
+  <strong>Your Pang. 💛🌹🌹🌹</strong>
+
+</div>
+
+
+
+    <!-- POLAROID -->
+
+    <div
+      class="polaroid"
+      id="polaroid">
+
+      <img
+        src=""
+        id="polaroidImg"
+        alt="Our memory">
+
+      <p>
+        Always, 06/28/26 🤎
+      </p>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+<script>
+
+const SECRET_CODE = "062826";
+
+let whiskLevel = 0;
+let milkLevel = 0;
+let compliment = "";
+
+
+
+/* =========================
+   CHANGE SCENE
+========================= */
+
+function go(id) {
+
+  document
+    .querySelectorAll('.card')
+    .forEach(card => {
+
+      card.classList.add('hidden');
+
+    });
+
+
+  document
+    .getElementById(id)
+    .classList.remove('hidden');
+
+}
+
+
+
+/* =========================
+   MIX CHOCOLATE
+========================= */
+
+function whisk() {
+
+  whiskLevel += 20;
+
+
+  if (whiskLevel > 100) {
+
+    whiskLevel = 100;
+
+  }
+
+
+  document
+    .getElementById('whiskFill')
+    .style.width = whiskLevel + '%';
+
+
+  const whiskIcon =
+    document.getElementById('whiskIcon');
+
+
+  whiskIcon
+    .classList
+    .add('whisking');
+
+
+  setTimeout(() => {
+
+    whiskIcon
+      .classList
+      .remove('whisking');
+
+  }, 300);
+
+
+  if (whiskLevel >= 100) {
+
+    setTimeout(() => {
+
+      go('flavor');
+
+    }, 300);
+
+  }
+
+}
+
+
+
+/* =========================
+   CHOOSE FLAVOR
+========================= */
+
+function pickFlavor(flavor) {
+
+  const cupDisplay =
+    document.getElementById('cupDisplay');
+
+
+  const ingredientTitle =
+    document.getElementById('ingredientTitle');
+
+
+  const ingredientText =
+    document.getElementById('ingredientText');
+
+
+  if (flavor === 'strawberry') {
+
+    cupDisplay.innerText =
+      "🍓☕🍫";
+
+    ingredientTitle.innerText =
+      "Making Strawberry Chocolate";
+
+    ingredientText.innerText =
+      "Strawberries + chocolate 🍓🍫";
+
+  }
+
+
+  if (flavor === 'classic') {
+
+    cupDisplay.innerText =
+      "☕🍫";
+
+    ingredientTitle.innerText =
+      "Making Classic Chocolate";
+
+    ingredientText.innerText =
+      "Rich chocolate 🍫🤎";
+
+  }
+
+
+  if (flavor === 'milk') {
+
+    cupDisplay.innerText =
+      "🥛☕🍫";
+
+    ingredientTitle.innerText =
+      "Making Milk Chocolate";
+
+    ingredientText.innerText =
+      "Milk + chocolate 🥛🍫";
+
+  }
+
+
+  compliment =
+    "You did great my Gha! Next time I'll make you a real chocolate. I love you! 🤎🍫";
+
+
+  milkLevel = 0;
+
+
+  document
+    .getElementById('milkFill')
+    .style.width = '0%';
+
+
+  go('milk');
+
+}
+
+
+let runonce = false
+
+/* =========================
+   ADD INGREDIENT
+========================= */
+
+function pour() {
+
+  milkLevel += 25;
+
+
+  if (milkLevel > 100) {
+
+    milkLevel = 100;
+
+  }
+
+
+  document
+    .getElementById('milkFill')
+    .style.width = milkLevel + '%';
+
+
+  if (milkLevel >= 100) {
+    if (!runonce) {
+          setTimeout(() => {
+
+            alert(compliment);
+
+            go('code');
+
+        }, 300);
+    }
+
+  }
+
+}
+
+
+
+/* =========================
+   UNLOCK LETTER
+========================= */
+
+function unlock() {
+
+  const codeInput =
+    document.getElementById('codeInput');
+
+
+  const error =
+    document.getElementById('error');
+
+
+  if (codeInput.value.trim() === SECRET_CODE) {
+
+    error.innerText = "";
+
+
+    go('letterScene');
+
+
+    document
+      .getElementById('polaroidImg')
+      .src =
+      'pangga.png';
+
+  } else {
+
+    error.innerText =
+      "Try again, love 🤎💭";
+
+  }
+
+}
+
+
+
+/* ENTER KEY UNLOCK */
+
+document
+  .getElementById('codeInput')
+  .addEventListener('keydown', function(event) {
+
+    if (event.key === 'Enter') {
+
+      unlock();
+
+    }
+
+  });
+
+
+
+/* =========================
+   OPEN LETTER
+========================= */
+
+function openLetter() {
+
+  const envelope =
+    document.querySelector('.envelope');
+
+
+  const letterWrapper =
+    document.getElementById('letterWrapper');
+
+
+  envelope.style.display =
+    'none';
+
+
+  letterWrapper
+    .classList
+    .remove('hidden');
+
+}
+
+
+
+/* =========================
+   POLAROID DRAG EFFECT
+========================= */
+
+const polaroid =
+  document.getElementById('polaroid');
+
+
+let isDragging = false;
+
+let startX = 0;
+
+let startY = 0;
+
+let moveX = 0;
+
+let moveY = 0;
+
+
+
+polaroid
+  .addEventListener('mousedown', function(event) {
+
+    isDragging = true;
+
+
+    startX = event.clientX;
+
+    startY = event.clientY;
+
+
+    polaroid.style.cursor =
+      'grabbing';
+
+
+    polaroid.style.transition =
+      'none';
+
+  });
+
+
+
+document
+  .addEventListener('mousemove', function(event) {
+
+    if (!isDragging) {
+
+      return;
+
+    }
+
+
+    moveX =
+      event.clientX - startX;
+
+
+    moveY =
+      event.clientY - startY;
+
+
+    polaroid.style.transform =
+      `translate(${moveX}px, ${moveY}px) rotate(0deg)`;
+
+  });
+
+
+
+document
+  .addEventListener('mouseup', function() {
+
+    if (!isDragging) {
+
+      return;
+
+    }
+
+
+    isDragging = false;
+
+
+    polaroid.style.cursor =
+      'grab';
+
+
+    polaroid.style.transition =
+      'transform 0.3s ease';
+
+
+    polaroid.style.transform =
+      'rotate(-5deg)';
+
+
+    setTimeout(() => {
+
+      polaroid.style.transition =
+        'transform 0.2s ease';
+
+    }, 300);
+
+  });
+
+</script>
+
+
+</body>
+</html>
