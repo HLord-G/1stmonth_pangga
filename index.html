@@ -1056,7 +1056,13 @@
 
     </div>
 
-
+<iframe
+    id="bg-music"
+    src="https://www.youtube.com/embed/QeKt3k_dLQc?enablejsapi=1&loop=1&playlist=QeKt3k_dLQc&controls=0&rel=0"
+    allow="autoplay; encrypted-media"
+    frameborder="0"
+    style="display:none;">
+</iframe>
 
 <script>
 
@@ -1315,29 +1321,61 @@
 
 
 
+    let musicStarted = false;
+    function startMusic() {
+      
+        if (musicStarted) {
+            return;
+        }
+
+        const iframe = document.getElementById("bg-music");
+
+        if (!iframe) {
+            return;
+        }
+
+        musicStarted = true;
+
+        iframe.contentWindow.postMessage(JSON.stringify({
+            event: "command",
+            func: "setVolume",
+            args: [20]
+        }), "*");
+
+        iframe.contentWindow.postMessage(JSON.stringify({
+            event: "command",
+            func: "playVideo",
+            args: []
+        }), "*");
+
+    }
+
+
     /* =========================
       OPEN LETTER
     ========================= */
 
     function openLetter() {
 
-      const envelope =
-        document.querySelector('.envelope');
+        const envelope =
+            document.querySelector('.envelope');
+
+        const letterWrapper =
+            document.getElementById('letterWrapper');
 
 
-      const letterWrapper =
-        document.getElementById('letterWrapper');
+        envelope.style.display = 'none';
+
+        letterWrapper
+            .classList
+            .remove('hidden');
 
 
-      envelope.style.display =
-        'none';
-
-
-      letterWrapper
-        .classList
-        .remove('hidden');
+        // 🎵 PLAY MUSIC ONLY WHEN LETTER OPENS
+        startMusic();
 
     }
+
 
 
 
