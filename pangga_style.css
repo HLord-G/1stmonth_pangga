@@ -1,0 +1,405 @@
+          * {
+            box-sizing: border-box;
+          }
+
+          body {
+            margin: 0;
+            min-height: 100vh;
+            background: #f3e9df;
+            font-family: "DM Serif Display", serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+          }
+
+          .card {
+            width: 100%;
+            max-width: 1180px;
+            background: #fff9f3;
+            padding: 36px;
+            border-radius: 18px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            text-align: center;
+          }
+
+
+          .dm-serif-display-regular {
+            font-family: "DM Serif Display", serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+
+          .dm-serif-display-regular-italic {
+            font-family: "DM Serif Display", serif;
+            font-weight: 400;
+            font-style: italic;
+          }
+
+
+
+          .hidden {
+            display: none !important;
+          }
+
+          h1 {
+            font-family: 'Homemade Apple', cursive;
+            color: #7b4b35;
+            font-size: 32px;
+          }
+
+          p {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #555;
+          }
+
+          button {
+            background: #8b5e3c;
+            border: none;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            margin: 6px;
+            font-family: 'Nunito', sans-serif;
+            transition: 0.3s;
+          }
+
+          button:hover {
+            background: #6f452f;
+            transform: translateY(-2px);
+          }
+
+          button:active {
+            transform: scale(0.95);
+          }
+
+
+          /* =========================
+            CHOCOLATE
+          ========================= */
+
+          .cup {
+            font-size: 70px;
+            margin: 10px 0;
+            position: relative;
+          }
+
+          .whisk {
+            position: absolute;
+            font-size: 32px;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            transform-origin: bottom center;
+          }
+
+          .whisking {
+            animation: whisk 0.35s infinite alternate;
+          }
+
+          @keyframes whisk {
+            from {
+              transform: translateX(-50%) rotate(-18deg);
+            }
+
+            to {
+              transform: translateX(-50%) rotate(18deg);
+            }
+          }
+
+
+          /* =========================
+            PROGRESS
+          ========================= */
+
+          .progress {
+            width: 100%;
+            height: 10px;
+            background: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px 0;
+          }
+
+          .fill {
+            height: 100%;
+            width: 0%;
+            background: #8b5e3c;
+            transition: width 0.3s ease;
+          }
+
+
+          /* =========================
+            STEAM
+          ========================= */
+
+          .steam {
+            font-size: 18px;
+            animation: steam 2s infinite;
+          }
+
+          @keyframes steam {
+            0% {
+              opacity: 0;
+              transform: translateY(10px);
+            }
+
+            50% {
+              opacity: 1;
+            }
+
+            100% {
+              opacity: 0;
+              transform: translateY(-15px);
+            }
+          }
+
+
+          /* =========================
+            CODE INPUT
+          ========================= */
+
+          #codeInput {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #d6c3b5;
+            outline: none;
+            text-align: center;
+            font-family: 'Nunito', sans-serif;
+            font-size: 15px;
+          }
+
+          #codeInput:focus {
+            border-color: #8b5e3c;
+          }
+
+
+          /* =========================
+            LETTER SCENE
+          ========================= */
+
+          #letterScene {
+            position: relative;
+          }
+
+          .flowers {
+            font-size: 24px;
+            margin-bottom: 15px;
+          }
+
+
+          /* =========================
+            ENVELOPE
+          ========================= */
+
+          .envelope {
+            width: 260px;
+            height: 170px;
+            background: #f7f1e7;
+            border-radius: 6px;
+            position: relative;
+            margin: 20px auto 35px;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+          }
+
+          .envelope:hover {
+            transform: translateY(-5px);
+          }
+
+          .envelope::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 130px solid #eee5d9;
+            border-right: 130px solid #e6ddd1;
+            border-top: 85px solid transparent;
+            z-index: 2;
+          }
+
+          .envelope::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 130px solid transparent;
+            border-right: 130px solid transparent;
+            border-top: 105px solid #f3ece2;
+            z-index: 3;
+          }
+
+          .seal {
+            width: 45px;
+            height: 45px;
+            background: #8b5e3c;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 72px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 5;
+          }
+
+          .open-text {
+            font-size: 12px;
+            color: #777;
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            z-index: 6;
+          }
+
+
+          /* =========================
+            LETTER WRAPPER
+          ========================= */
+
+          .letter-wrapper {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 30px;
+            width: 100%;
+          }
+
+
+          /* =========================
+            PAPER
+          ========================= */
+
+          .paper {
+            background: #fffaf3;
+            padding: 38px 42px;
+            border-radius: 8px;
+            width: min(720px, 100%);
+              font-family: "DM Serif Display", serif !important;
+
+            font-size: 18px;
+            line-height: 2;
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+            animation: slideUp 1s ease forwards;
+
+            text-align: left;
+          }
+
+          .paper h1 {
+            text-align: center;
+          }
+
+          @keyframes slideUp {
+            from {
+              transform: translateY(40px);
+              opacity: 0;
+            }
+
+            to {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+
+
+          /* =========================
+            POLAROID
+          ========================= */
+
+          .polaroid {
+            background: white;
+
+            padding: 8px 8px 18px;
+
+            width: 320px;
+
+            transform: rotate(-5deg);
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+            transition: transform 0.2s ease;
+
+            cursor: grab;
+
+            user-select: none;
+          }
+
+          .polaroid img {
+            width: 100%;
+            display: block;
+            border-radius: 2px;
+            pointer-events: none;
+          }
+
+          .polaroid p {
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 0;
+
+            font-family: 'Homemade Apple', cursive;
+          }
+
+          .polaroid:hover {
+            transform: rotate(0deg) scale(1.05);
+          }
+
+
+          /* =========================
+            MOBILE
+          ========================= */
+
+          @media (max-width: 600px) {
+
+            body {
+              padding: 10px;
+            }
+
+            .card {
+              padding: 20px 14px;
+              border-radius: 14px;
+            }
+
+            .letter-wrapper {
+              flex-direction: column;
+              align-items: center;
+            }
+
+            .paper {
+              width: 100%;
+              max-width: 100%;
+              padding: 24px 20px;
+              font-size: 16px;
+              line-height: 1.9;
+            }
+
+            .paper h1 {
+              font-size: 26px;
+            }
+            
+
+            .polaroid {
+              width: min(280px, 90%);
+            }
+
+            .polaroid p {
+              font-size: 14px;
+            }
+
+          }
